@@ -1,0 +1,44 @@
+Permute
+
+This is a command line tool designed to behave like a Unix filter. It uses an implementation of Heap's algorithm to efficiently generate the full set of permutations of the input arguments.
+
+Example usage:
+$./permute 1 2 3
+1 2 3 
+2 1 3 
+3 1 2 
+1 3 2 
+2 3 1 
+3 2 1 
+
+$./permute a b c d
+a b c d 
+b a c d 
+c a b d 
+a c b d 
+b c a d 
+c b a d 
+d b a c 
+b d a c 
+a d b c 
+d a b c 
+b a d c 
+a b d c 
+a c d b 
+c a d b 
+d a c b 
+a d c b 
+c d a b 
+d c a b 
+d c b a 
+c d b a 
+b d c a 
+d b c a 
+c b d a 
+b c d a 
+ 
+$ ./permute a b c | wc -l   
+6
+
+$ ./permute 1 a 3 - | wc
+24 96 216
