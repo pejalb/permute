@@ -1,14 +1,12 @@
 #include "heaps_algorithm.h"
 #include <stdio.h>
-#define MIN_ARGS (1u)
+#include <stdlib.h>
 int main(int argc, char *argv[argc + 1])
 {
-    if (argc < MIN_ARGS) {
-        printf("\n%s requires at least %u arguments!", argv[0], MIN_ARGS);
+    if (argc < 2) {
+        printf("\n%s requires at least 1 arguments!\n", argv[0]);
+        return EXIT_FAILURE;
     }
-    int arr[] = {1, 2, 3};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    permute_recursive_heaps(arr, size, size);
-    printf("\n");
+    permute_recursive_heaps(&argv[1], argc - 1, argc - 1);
     return 0;
 }

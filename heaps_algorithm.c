@@ -11,9 +11,9 @@ static inline void permute_swap(permute_t *a, permute_t *b)
 void permute_print_array(permute_t *arr, size_t size)
 {
     for (size_t i = 0; i < size; i++) {
-        printf(
-            "%d ",
-            arr[i]); // TODO: add handling for different possible types of data!
+        printf("%s ",
+               arr[i]); // TODO: add handling for different possible types of
+                        // data at some point!
     }
     printf("\n");
 }
